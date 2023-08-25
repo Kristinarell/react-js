@@ -1,0 +1,9 @@
+.myBtn {
+  border-radius: 5px;
+  border: 1px solid #1a6afd; /* Параметры рамки */
+  background: #ffffff; /* Цвет фона */
+  font-size: 15px; /* Размер текста */
+  padding: 5px 20px; /* Поля вокруг текста */
+  color: #515158;
+  cursor: pointer;
+}
