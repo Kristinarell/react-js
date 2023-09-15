@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MyButton from "./UI/MyButton";
 import { MyInput } from "./UI/MyInput";
-import "../styles/style.css";
 
 const NewPostForm = ({ create }) => {
   //   Если в форме несколько заполняемых полей
@@ -11,16 +10,16 @@ const NewPostForm = ({ create }) => {
   //   const [title, setTitle] = useState(" ");
   //   const [body, setBody] = useState(" ");
 
-  const [post, setPost] = useState({ title: " ", body: " " });
+  const [post, setPost] = useState({ title: "", body: "" });
 
   const addNewPost = (event) => {
     event.preventDefault();
     create({ id: Date.now(), ...post });
-    setPost({ title: " ", body: " " }); // затираем данные у поста, чтобы очистить поля после обновления
+    setPost({ title: "", body: "" }); // затираем данные у поста, чтобы очистить поля после обновления
   };
 
   return (
-    <form className="form_container">
+    <form>
       <MyInput
         type="text"
         placeholder="Введите назвавание поста"

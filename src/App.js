@@ -6,13 +6,14 @@ import NewPostForm from "./components/NewPostForm";
 import { MySelect } from "./components/UI/MySelect";
 import { MyInput } from "./components/UI/MyInput";
 import PostFilter from "./components/PostFilter";
+import { MyModal } from "./components/UI/MyModal";
 
 function App() {
   const [posts, setPosts] = useState([
     { id: 1, title: "генадий", body: "ммммммммммммм" },
     { id: 2, title: "ккккккккккккк", body: "ввввввввввввв" },
     { id: 3, title: "яяяяяяяяяяяяя", body: "гггггггггггггг" },
-    { id: 4, title: "аааааааа", body: "букин" },
+    { id: 4, title: "ааа", body: "букин" },
   ]);
 
   const defaultValue = "Сортировка";
@@ -45,7 +46,10 @@ function App() {
   return (
     <div className="App">
       <PostFilter filter={filter} setFilter={setFilter} defaultValue={defaultValue} />
-      <NewPostForm create={createNewPost} />
+      <MyModal>
+        <NewPostForm />
+      </MyModal>
+
       <PostList posts={sortedAndSearchedPosts} remove={removePost} />
     </div>
   );
