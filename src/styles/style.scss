@@ -1,0 +1,86 @@
+@import url(_header.scss);
+
+// Переменные
+$textcolor: #2d2d32;
+$background_linear: (221deg, #c548ab -3.4%, #635bff 101.08%);
+$dark_violet: #1b193f;
+$post_color: rgba(154, 137, 174, 0.6);
+$white: #fff;
+
+@mixin flexbox() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: $white;
+  --lavanda: #9cc0ff;
+  --gray: #828282;
+  --violet: #311067;
+}
+
+body {
+  background: linear-gradient($background_linear), url(vectors.svg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 22px;
+  text-align: center;
+}
+
+//Стиль Постов
+.post {
+  width: 70%;
+  height: 7rem;
+  margin-top: 20px;
+  padding: 0 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: $post_color;
+  @include flexbox();
+
+  .post_content {
+    width: 70%;
+    padding-left: 30px;
+  }
+
+  .title {
+  }
+
+  .body {
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.filter_wrapper {
+  @include flexbox();
+  width: 70%;
+  margin-top: 5rem;
+}
+
+.pagination {
+  display: flex;
+  margin: 20px;
+}

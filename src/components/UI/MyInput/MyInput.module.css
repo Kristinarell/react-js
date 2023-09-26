@@ -1,0 +1,11 @@
+.MyInpt {
+  width: 70%;
+  height: 50px;
+  border: none;
+  padding: 0 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #2d2d32;
+  margin-right: 0.5rem;
+  background-color: rgb(232, 228, 255);
+}

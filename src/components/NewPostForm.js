@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import MyButton from "./UI/MyButton";
-import { MyInput } from "./UI/MyInput";
+import MyButton from "./UI/MyButton/MyButton";
+import { MyInput } from "./UI/MyInput/MyInput";
 
 const NewPostForm = ({ create }) => {
   //   Если в форме несколько заполняемых полей

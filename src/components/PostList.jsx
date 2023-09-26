@@ -8,8 +8,8 @@ const PostList = ({ posts, ...props }) => {
 
   return (
     <>
-      {posts.map((post, index) => (
-        <PostItem post={post} key={post.id} number={index + 1} remove={props.remove} />
+      {posts.map((post) => (
+        <PostItem post={post} key={post.id} remove={props.remove} />
       ))}
     </>
   );

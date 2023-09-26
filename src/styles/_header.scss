@@ -1,0 +1,40 @@
+header {
+  padding-top: 2.5rem;
+  padding-left: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header div {
+  display: flex;
+  justify-content: flex-start;
+}
+.logo_img {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(Logo.svg);
+  display: block;
+  background-repeat: no-repeat;
+}
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 6.25rem;
+}
+.navLink {
+  margin-left: 2.3rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration: none;
+  padding-top: 3px;
+  padding-left: 5px;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./MySelect.module.scss";
 
 export const MySelect = ({ options, defaultValue, ...props }) => {
   // const selectOption = (event) => {
@@ -9,10 +10,12 @@ export const MySelect = ({ options, defaultValue, ...props }) => {
   // };
 
   return (
-    <select value={props.value} onChange={(event) => props.onChange(event.target.value)}>
-      <option defaultValue>{defaultValue}</option>
+    <select className={classes.select} value={props.value} onChange={(event) => props.onChange(event.target.value)}>
+      <option className={classes.option} defaultValue>
+        {defaultValue}
+      </option>
       {options.map((option) => (
-        <option key={option.value} value={option.value}>
+        <option className={classes.option} key={option.value} value={option.value}>
           {option.name}
         </option>
       ))}
